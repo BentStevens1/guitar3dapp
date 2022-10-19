@@ -61,9 +61,9 @@ renderer.setSize(size.width, size.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 
-const texture = new THREE.TextureLoader().load('/assets/baked.jpg');
-const texture2 = new THREE.TextureLoader().load('/assets/fire.jpg');
-const texture3 = new THREE.TextureLoader().load('/assets/ocean.jpg');
+const texture = new THREE.TextureLoader().load('./assets/baked.jpg');
+const texture2 = new THREE.TextureLoader().load('./assets/fire.jpg');
+const texture3 = new THREE.TextureLoader().load('./assets/ocean.jpg');
 
 
 texture.flipY = -1;
@@ -152,7 +152,7 @@ const ballMaterialMandelbrot = new THREE.ShaderMaterial({
 
 const loader = new GLTFLoader();
 loader.load(
-    '/assets/photobooth.glb',
+    './assets/photobooth.glb',
     (gltf) => {
         console.log(gltf);
         gltf.scene.position.setY(-2);
